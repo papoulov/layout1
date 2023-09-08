@@ -5,9 +5,7 @@
     padding: 0;
 }
 
-/* body and container styling
-
-*/
+/* body and container styling */
 
 
 body{
@@ -22,9 +20,7 @@ body{
     /*variables*/
     --colorgrey:hsl(0, 1%, 51%);
     --colorblue: hsl(248, 67%, 48%);
-
     --colorblue: #3e28cc;
-    
     --spacelarge:20px;
     --spacexlarge:30px;
     --ffregular:'Lato', Arial, Helvetica, sans-serif;
@@ -47,7 +43,6 @@ stocked on th top of each other
 */
 
 .grid_layout{
-    max-width: 600px;
     display: grid;
     box-shadow: 5px 5px 5px rgb(179, 177, 177);
     border-radius: var(--spacelarge);
@@ -59,17 +54,20 @@ stocked on th top of each other
 
 @media (min-width: 600px){
     .grid_layout{
+        max-width: 650px;
         grid-template-columns: 1fr 1fr;
     }
 }
 
-.result_section{
 
+.result_section{
     color:aliceblue;
     text-align: center;
     background-color: var(--colorblue) ;
     padding: var(--spacexlarge);
     border-radius: var(--spacelarge);
+
+    /* title : Your Result*/
 
     & h1{
         font-family: var(--ffregular);
@@ -78,23 +76,29 @@ stocked on th top of each other
         color: var(--colorgrey);
     }
 
+    /* title : Great*/
     .remark{
         font-weight: 400;
         font-size: 1.3rem;
         padding-bottom: 1rem;
     }
 
-    .remark_contain{
+    /* title : Great*/
+    .remark_text{
         color:var(--colorgrey)
     }
 }
 
+/* style for screen under 600*/
 @media (max-width: 600px){
+    .grid_layout{
+        max-width:90%;
+    }
     .result_section{
-        max-width: 250px;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
+
 }
 
 .scorecircle{ 
@@ -106,9 +110,9 @@ stocked on th top of each other
     border-radius: 50%;
     aspect-ratio: 1;
     padding: var(--spacelarge);
-    margin: 40px auto;
+    margin: 35px auto;
 
-    /*inside circle*/
+    /* style only inside circle*/
     .score{
         font-weight: 500;
         font-size: 4rem;
@@ -129,7 +133,6 @@ stocked on th top of each other
 }
 .summary_section_container{
     width: 90%;
-    
     padding: var(--spacexlarge);
     
     & h2{
@@ -158,7 +161,6 @@ stocked on th top of each other
 .summary_content.memory{
     background-color: rgb(252, 242, 216) ;
     .test_name{
-    
         color:rgb(240, 200, 90)
     }
 }
@@ -173,11 +175,9 @@ stocked on th top of each other
 .summary_content.visual{
     background-color: rgb(213, 193, 247) ;
     .test_name{
-    
         color:rgb(40, 33, 228)
     }
 }
-
 
 
 .test_score{
@@ -195,7 +195,7 @@ button{
     font-weight: 300;
     border-radius: 1rem;
     padding: 0.5rem;
-    color: aliceblue;
+    color: hsl(208, 100%, 97%);
     background-color:  rgb(50, 49, 49);
     margin: var(--spacemedium);
     margin-top: 10px;
