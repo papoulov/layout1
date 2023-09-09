@@ -59,6 +59,7 @@ stocked on th top of each other
     }
 }
 
+/*result section style*/
 
 .result_section{
     color:aliceblue;
@@ -95,8 +96,8 @@ stocked on th top of each other
         max-width:90%;
     }
     .result_section{
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
 
 }
